@@ -4,8 +4,17 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/8.0.1/samples
  */
-apply plugin: 'java'
-apply plugin: 'application'
+
+buildscript {
+  dependencies {
+    classpath 'org.postgresql:postgresql:42.2.14'
+  }
+}
+plugins {
+  id "java"
+  id "application"
+  id "org.flywaydb.flyway" version "9.15.1"
+}
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
@@ -13,12 +22,13 @@ targetCompatibility = JavaVersion.VERSION_17
 repositories {
   mavenCentral()
 }
+
 dependencies {
   implementation 'com.yugabyte:jdbc-yugabytedb:42.3.5-yb-2'
-
 }
-mainClassName = "com.yugabyte.samples.App"
-archivesBaseName = "simple-gradle"
+mainClassName = 'SampleApp'
+
+archivesBaseName = "simple-gradle-flyway"
 jar {
   manifest {
     attributes "Main-Class": mainClassName
@@ -27,4 +37,12 @@ jar {
   from {
     configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
   }
+}
+
+flyway {
+  url = 'jdbc:postgresql://localhost:5433/yugabyte'
+  user = 'yugabyte'
+  password = ''
+  driver = 'org.postgresql.Driver'
+  schemas = ['public']
 }

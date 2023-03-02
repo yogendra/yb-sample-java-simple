@@ -1,7 +1,7 @@
 # Simple Java Application for YugabyteDB
 
-The application connects to your YugabyteDB instance via 
-[topology-aware JDBC driver](https://docs.yugabyte.com/latest/integrations/jdbc-driver/) and performs basic SQL 
+The application connects to your YugabyteDB instance via
+[topology-aware JDBC driver](https://docs.yugabyte.com/latest/integrations/jdbc-driver/) and performs basic SQL
 operations. The instructions below are provided for [YugabyteDB Managed](https://cloud.yugabyte.com/) deployments.
 If you use a different type of deployment, then update the `/src/main/resources/app.properties` file with proper connection parameters.
 
@@ -15,7 +15,7 @@ If you use a different type of deployment, then update the `/src/main/resources/
 * [Start YugabyteDB Managed](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-quickstart/qs-add/) instance. Free tier exists.
 * Add an IP address of your machine/laptop to the [IP allow list](https://docs.yugabyte.com/latest/yugabyte-cloud/cloud-secure-clusters/add-connections/#manage-ip-allow-lists)
 
-## Clone App From GitHub
+## Clone com.yugabyte.samples.com.yugabyte.samples.App From GitHub
 
 Clone the application to your machine:
 
@@ -33,13 +33,13 @@ Open the `app.properties` file and specify the following configuration parameter
 * `dbUser` - the database username you used for your instance.
 * `dbPassword` - the database password.
 * `sslMode` - the SSL mode. Set to `verify-full` for YugabyteDB Managed deployments.
-* `sslRootCert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`) 
+* `sslRootCert` - a full path to your CA root cert (for example, `/Users/dmagda/certificates/root.crt`)
 
 Note, you can easily find all the settings on the YugabyteDB Managed dashboard:
 
 ![image](src/main/resources/cloud_app_settings.png)
 
-## Build and Run App
+## Build and Run com.yugabyte.samples.com.yugabyte.samples.App
 
 1. Build the app with Maven:
     ```bash
@@ -65,7 +65,7 @@ name = Jessica, age = 28, country = USA, balance = 9200
 name = John, age = 28, country = Canada, balance = 9800
 ```
 
-## Explore App Logic
+## Explore com.yugabyte.samples.com.yugabyte.samples.App Logic
 
 Congrats! You successfully executed a simple Java app that works with YugabyteDB.
 

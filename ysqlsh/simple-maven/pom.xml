@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.yugabyte.samples</groupId>
-  <artifactId>ysql-simple</artifactId>
+  <artifactId>simple-maven</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>ysql-simple</name>
+  <name>simple-maven</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,7 +44,7 @@
               <archive>
                 <manifest>
                   <mainClass>
-                    com.yugabyte.samples.App
+                    com.yugabyte.samples.com.yugabyte.samples.com.yugabyte.samples.App
                   </mainClass>
                 </manifest>
               </archive>

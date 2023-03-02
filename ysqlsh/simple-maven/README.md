@@ -1,6 +1,6 @@
-# YSQL Simple Java Example
+# YSQL / Simple Maven
 
-This is a simple java application showing connectiont to YugabyteDB.
+This is a simple java application showing connection to YugabyteDB.
 
 ## Prerequisite
 - Java 17 and above
@@ -8,8 +8,8 @@ This is a simple java application showing connectiont to YugabyteDB.
 ## Build
 
 ```bash
-git clone https://github.com/yogendra/yb-sample-ysql-simple-java.git ysql-simple
-cd ysql-simple
+git clone https://github.com/yogendra/yb-simple-sample.git yb-simple-sample
+cd yb-simple-sample/ysql/simple-maven
 ./mvnw package
 ```
 
